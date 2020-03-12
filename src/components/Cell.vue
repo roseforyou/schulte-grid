@@ -33,10 +33,11 @@ export default {
       // eslint-disable-next-line
       handler: function(val, oldVal) {
         // reset style
-        this.selfStyle["color"] = "black";
-        this.selfStyle["background-color"] = "#ffe0b2";
+        // this.selfStyle["color"] = "black";
+        // this.selfStyle["background-color"] = "#ffe0b2";
         // enable click
         // this.clicked = false;
+        this.cellClass = ''
       }
     }
   },
@@ -69,8 +70,8 @@ export default {
   },
   mounted() {
     // reset style
-    this.selfStyle["color"] = "black";
-    this.selfStyle["background-color"] = "#ffe0b2";
+    // this.selfStyle["color"] = "black";
+    // this.selfStyle["background-color"] = "#ffe0b2";
   }
 };
 </script>
