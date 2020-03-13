@@ -6,4 +6,4 @@ Demo: https://roseforyou.github.io/schulte-grid/
 
 改进一些操作, 增加了音效, 小孩子更愿意玩了.
 
-<a href="https://roseforyou.github.io/schulte-grid/" rel="nofollow"><img src="cover.jpg" alt="cover" style="max-width: 40%;"></a>
+<a href="https://roseforyou.github.io/schulte-grid/" rel="nofollow"><img src="cover.jpg" alt="cover" style="width: 330px;"></a>
