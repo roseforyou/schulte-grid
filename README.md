@@ -1,6 +1,9 @@
-# schulte-grid
+# 舒尔特方格(Schulte Grid) 支持手机模式
 
-5 × 5 Schulte Grid implemented by vue.js &amp; vant-ui
-https://roseforyou.github.io/schulte-grid/
+### forked from jwenjian/schulte-grid
 
-> Please use **mobile browser** to get better experience.
+Demo: https://roseforyou.github.io/schulte-grid/
+
+改进一些操作, 增加了音效, 小孩子更愿意玩了.
+
+[![cover](cover.jpg)](https://roseforyou.github.io/schulte-grid/)

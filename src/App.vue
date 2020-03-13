@@ -32,25 +32,15 @@ export default {
   }
 }
 
-@media (min-width: 1100px) {
-  :root {
-    font-size: 5em;
-  }
-}
-
-@media (min-width: 1500px) {
-  :root {
-    font-size: 7em;
-  }
-}
-
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 800px;
 }
+
 </style>

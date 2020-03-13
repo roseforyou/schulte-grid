@@ -66,51 +66,12 @@ export default {
   },
   methods: {
     shuffle() {
-      let hub = [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25
-      ];
+      let hub = Array.from({ length: 25 }, (v, k) => k + 1);
       // eslint-disable-next-line
       hub.sort((a, b) => (Math.random() > 0.5 ? -1 : 1));
       this.grid_data = hub;
     },
     stopAndShowErrorMsg() {
-      // eslint-disable-next-line no-console
-      // console.log(payload);
-      // this.circleColor = "#ec407a";
-      // Dialog.alert({
-      //   title: "Wrong",
-      //   message: `expect ${payload.expected}, but got ${payload.num}.\n\nGo play again!`
-      // }).then(() => {
-      //   this.expected = 1;
-      //   this.shuffle();
-      //   this.reset = !this.reset;
-      //   this.circleColor = "white";
-      // });
-
       this.$refs.uhoh.currentTime = 0;
       this.$refs.uhoh.play();
     },
@@ -131,8 +92,8 @@ export default {
         let duration = (this.endTime - this.startTime) / 1000;
         // finished success
         Dialog.alert({
-          title: "Congratulations!!!",
-          message: `It takes you ${duration}s, you can do better!`
+          title: "恭喜你!!!",
+          message: `一共用了 ${duration} 秒, 继续加油哦!`
         }).then(() => {
           this.expected = 1;
           this.toEnd();
@@ -162,18 +123,35 @@ export default {
 
 <style>
 .van-circle {
-  -moz-user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+     -moz-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .circleDown {
-  animation: slideDown 2s ease-out;
+  animation: slideDown 2s ease-out, 4s rotate 2s ease-in-out infinite;
   animation-fill-mode: forwards;
 }
 .circleUp {
   margin-top: 0;
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(720deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
 @keyframes slideDown {
   0% {
     margin-top: 0;
@@ -197,7 +175,6 @@ export default {
   margin: auto auto;
 }
 .logo {
-  padding-top: 23px;
   width: 100px;
   height: 100px;
 }
@@ -206,7 +183,7 @@ export default {
   opacity: 0;
 }
 .grid-fadeIn {
-  animation: fadeIn 0.5s ease-out;
+  animation: fadeIn .5s ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -218,4 +195,5 @@ export default {
     opacity: 1;
   }
 }
+
 </style>
